@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500&display=swap');
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "MOntserrat",sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center;
+align-items: center;
+height: 100vh;
+background: hsl(30%, 38%, 92%);
+}
+
+.card { 
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: auto;
+}
+
+.image {
+    background: url('./images/image-product-desktop.jpg') no-repeat center;
+    background-size: cover;
+    height: auto;
+    width: 300px;
+
+}
+.card-details {
+    display: flex;
+    flex-direction: column;
+    background:hsla(0, 0, 100%);
+    padding:1.2rem;
+    width:300px;
+    border-radius : 0 8px 8px 0;
+    }
+.card-details .category {
+    text-transform :uppercase;
+    color:hsl(228, 12%, 48%);
+    letter-spacing:3px;
+    font-weight: 500;
+
+}
+.card-details .title {
+font-size: 2rem;
+padding:1.2rem 0;
+color: hsl(212%, 21%, 14%);
+font-family: 'Fraunces', serif !important;
+font-weight:700;
+}
+
+.card-details .para {
+color:hsl(228%, 12%, 48%);
+letter-spacing: 2px;
+}
+
+.card-details .price {
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    padding: 1.2rem 0;
+    align-items:center;
+    font-weight: normal;
+}
+.price .discounted-price {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+color:hsl(157%, 26%, 42%)
+}
+.price .actual-price {
+    font-size : .9rem;
+    text-decoration:line-through;
+    color: hsl(228%, 12%, 48%);
+    font-weight: 500;
+
+}
+
+.card-details.button {
+    text-align:center;
+    padding: 1.2rem 0;
+}
+.button button {
+    width:100%;
+    padding: 1rem 0;
+    background: hsl(158,36%,37%);
+    color: hsl(0%, 0%, 100%);
+    border:none;
+    outline:none;
+    border-radius:8px;
+}
+button .icon {
+    width :5%;
+    margin-right : .5rem;
+}
+button:hover {
+   background: hsl(212%, 21%, 14%);
+   cursor:pointer;
+}
+
+@media (max-width:612px) {
+    .card{
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .image{
+        background:url('./images/image-product-mobile.jpg') no-repeat center;
+        height: 300px;
+        background-size: cover;
+        width:100%;
+    }
+    .card-detail{
+        width : 100%;
+    }
+}
